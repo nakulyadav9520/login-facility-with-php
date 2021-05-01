@@ -1,0 +1,323 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+* {
+    margin    : 0;
+    padding   : 0;
+    outline   : none;
+    border    : none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size  : 4rem;
+    text-align : left;
+    font-weight: 600;
+    color      : #000000;
+}
+
+/* start header  */
+.sticky {
+    background: #424242e3;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-size  : 1rem;
+    color      : #ffffff;
+    font-weight: 600;
+}
+
+.head-logo {
+    max-height  : 60px;
+    margin-right: .5rem;
+}
+
+.contact-block img {
+    width: 25px;
+}
+
+.contact-block a {
+    text-decoration: none;
+    color          : #ffffff;
+    font-weight    : 600;
+}
+
+/* End Header  */
+.banner-section {
+    background-image   : url('../images/banner-image01.jpg');
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center center;
+    width              : 100%;
+    height             : 100vh;
+    overflow           : hidden;
+    position           : relative;
+    align-items        : center;
+}
+
+.pd-tb {
+    padding: 100px 0px;
+}
+
+.b-heading h1 {
+    color      : #ffffff;
+    font-size  : 5rem;
+    font-weight: 800;
+}
+
+.b-heading p {
+    color    : #ffffff;
+    font-size: 1.3rem;
+}
+
+.book-btn {
+    width      : 350px;
+    font-size  : 20px;
+    font-weight: 600;
+    color      : #ffffff;
+    background : #eea318;
+    padding    : 10px 0;
+}
+
+.book-btn:hover {
+    background: #F28904;
+    color     : #ffffff;
+}
+
+.w-para {
+    font-size  : 18px;
+    color      : #ffffff;
+    font-weight: bolder;
+}
+
+.t-small {
+    font-size  : 15px;
+    font-weight: 400;
+}
+
+/* End Banner Section  */
+/* Start Welcome section */
+
+.comman-heading h1 {
+    color      : #000000;
+    font-size  : 2rem;
+    font-weight: 800;
+}
+
+.comman-para a {
+    color          : #f2762e;
+    text-decoration: underline;
+}
+
+.accomodation-block {
+    background: #dddddd5e;
+    padding   : 1rem;
+}
+
+.acco-img img {
+    max-width: 2.5rem;
+}
+
+.acco-info h2 {
+    font-size: 1rem;
+
+}
+
+/* End Welcome Section  */
+
+/* Start Holiday Section  */
+.holiday-section {
+    background: #dddddd5e;
+    padding   : 80px 0px 50px 0px;
+}
+
+.holiday-section .tab-pane {
+    padding: 2.8rem;
+}
+
+.white-block {
+    background: #ffffff;
+    padding   : 1rem;
+}
+
+.holiday-price-block h1 {
+    font-size  : 1.1rem;
+    font-weight: 800;
+    color      : #eea318;
+}
+
+.holiday-section .fa-gripfire {
+    color: #ff4e00;
+}
+
+.para-bg {
+    background: #dddddd5e;
+}
+
+.low-season {
+    border-top: 1px solid #7272729f;
+}
+
+.low-season h2 {
+    font-size  : 1.1rem;
+    font-weight: 800;
+    margin-top : .5rem;
+}
+
+.low-season .top-brdr {
+    border-top: 1px solid #7272729f;
+}
+
+.holiday-section .nav-tabs .nav-link.active {
+    color        : #eea318;
+    border-bottom: 2px solid #eea318;
+}
+
+.holiday-section .nav-item .nav-link {
+    font-size       : 1.1rem;
+    font-weight     : 800;
+    color           : #8b8b8b;
+    border          : none;
+    background-color: transparent;
+    padding         : 0.8rem 1rem;
+}
+
+/* End Holiday Section  */
+/* Start Booking section */
+.booking-section {
+    background-image : url('http://localhost/Casa-Sabine/public/front_assets/images/background.png');
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+.booking-info h2 {
+    color    : #ffffff;
+    font-size: 1.6rem;
+}
+
+.booking-info p {
+    color: #ffffff;
+}
+
+.book-btn {
+    text-align : center;
+    display    : block;
+    width      : 60%;
+    color      : #ffffff;
+    font-size  : 15px;
+    font-weight: 800;
+}
+
+/* End Booking section */
+
+/* Start Gallery section */
+.gallery_section .carousel-item {
+    object-fit       : cover;
+    height           : 80vh;
+    background-repeat: no-repeat;
+}
+
+.gallery_section .carousel-item .img-fluid {
+    width : 100%;
+    height: 100%;
+}
+
+.gallery_section .carousel-indicators li {
+    width  : 100px;
+    opacity: 1;
+    margin : 0 1rem;
+}
+
+/* End Gallery section */
+/* Start Footer section  */
+.footer_section {
+    background-image   : url('../images/slider05.jpg');
+    background-repeat  : no-repeat;
+    background-position: cover;
+}
+
+.footer_section .form_block {
+    background-color: #ffffff;
+    padding         : 2rem;
+}
+
+.pd_top {
+    padding-top: .7rem;
+}
+
+.footer_section .foot_location_block {
+    margin-top: 3rem;
+}
+
+.heighlighted_para {
+    font-size: 1.2rem;
+}
+
+.footer_section .foot_location_block .comman-heading h1 {
+    color: #ffffff;
+}
+
+.footer_section .foot_location_block p {
+    color: #ffffff;
+}
+
+.footer_section .foot_bottom {
+    background    : #353535;
+    padding-bottom: 3rem;
+}
+
+.footer_section .foot_bottom .foot_bottom_heading h2 a {
+    font-size      : 1.2rem;
+    font-weight    : 800;
+    color          : #ffffff;
+    text-decoration: none;
+}
+
+.footer_section .foot_bottom .foot_bottom_heading p {
+    color        : #ffffff;
+    margin-bottom: 2rem;
+}
+
+.bottom_contact_block {
+    border-top: 1px solid rgba(177, 177, 177, 0.493);
+}
+
+.footer_section .foot_bottom .socialmedia_icon_block li a {
+    font-size: 1.6rem;
+    color    : #ffffff;
+}
+
+.footer_section .privacy_policy_block a {
+    color          : #d6d6d680;
+    text-decoration: underline;
+}
+
+/* End footer section  */
+/* Start Login Form */
+
+.center_block {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.log_form_block {
+    border-radius: 5px;
+    background   : #fff;
+    box-shadow   : 0px 1px 8px #585858cb;
+}
+
+/* End Login Form */
