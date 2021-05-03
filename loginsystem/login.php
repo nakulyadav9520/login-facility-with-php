@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="comman-heading d-inline-block mb-4">
                         <h1>Login to our Casa Sabine</h1>
                     </div>
-                    <form action="" method="POST">
+                    <form action="login.php" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" maxlength="11" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>

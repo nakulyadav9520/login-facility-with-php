@@ -49,15 +49,15 @@ echo '<!DOCTYPE html>
           </li>';
           if (!$loggedin) {
             echo '<li class="nav-item">
-            <a class="nav-link" href="/loginsystem/login.php">Login</a>
+            <a class="nav-link" href="login.php">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/loginsystem/signup.php">Signup</a>
+            <a class="nav-link" href="signup.php">Signup</a>
           </li>';
           }
           if ($loggedin) {
             echo '<li class="nav-item">
-            <a class="nav-link" href="/loginsystem/logout.php">Logout</a>
+            <a class="nav-link" href="logout.php">Logout</a>
           </li>';
           }
         echo '</ul>
