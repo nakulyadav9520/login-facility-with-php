@@ -7,17 +7,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $exists = false;
 
-    $sql = "Select * from users where email = '$email' AND password = '$password'";
+    $sql = "Select * from users where email = '$email'";
     $result = mysqli_query($conn, $sql);
     $numRow = mysqli_num_rows($result);
     if ($numRow == 1) {
-        $login = true;
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $_SESSION['email'] = $email;
-        header("location: welcome.php");
+        while ($row = mysqli_fetch_assoc($result)) {
+            if (password_verify($password, $row['password'])) {
+                $login = true;
+                session_start();
+                $_SESSION['loggedin'] = true;
+                $_SESSION['email'] = $email;
+                header("location: welcome.php");
+            } else {
+                $failedAlert = "Invailid Email or Password";
+            }
+        }
     } else {
-        $failedAlert = "Password Do not Match";
+        $failedAlert = "Invailid Email or Password";
     }
 }
 ?>
@@ -26,13 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="comman/images/logo.ico" rel="icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-    <title>Login</title>
+    <link rel="stylesheet" href="front_assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="front_assets/css/style.css" />
+    <title>Login Casa Sabine</title>
 </head>
 
 <body>
@@ -55,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>';
     }
     ?>
-    <section class="signup-section">
+    <section class="login-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-8 my-4">
@@ -65,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <form action="login.php" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" maxlength="11" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+                            <input type="email" maxlength="20" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>

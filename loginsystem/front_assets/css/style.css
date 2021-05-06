@@ -306,18 +306,3 @@ h6 {
 }
 
 /* End footer section  */
-/* Start Login Form */
-
-.center_block {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.log_form_block {
-    border-radius: 5px;
-    background   : #fff;
-    box-shadow   : 0px 1px 8px #585858cb;
-}
-
-/* End Login Form */
